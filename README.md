@@ -34,9 +34,11 @@ function to load data used by
 {[wordpiece](https://github.com/jonathanbratt/wordpiece)}.
 
 ``` r
-# library(wordpiece.data)
-# 
-# head(wordpiece_vocab())
+library(wordpiece.data)
+
+head(wordpiece_vocab())
+#>     [PAD] [unused0] [unused1] [unused2] [unused3] [unused4] 
+#>         0         1         2         3         4         5
 ```
 
 ## Code of Conduct

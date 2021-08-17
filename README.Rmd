@@ -42,9 +42,9 @@ You likely won't ever need to use this package directly.
 It contains a function to load data used by {[wordpiece](https://github.com/jonathanbratt/wordpiece)}.
 
 ```{r data-functions}
-# library(wordpiece.data)
-# 
-# head(wordpiece_vocab())
+library(wordpiece.data)
+
+head(wordpiece_vocab())
 ```
 
 ## Code of Conduct
