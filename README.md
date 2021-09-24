@@ -7,7 +7,8 @@
 <!-- badges: end -->
 
 The goal of wordpiece.data is to provide stable, versioned data for use
-in the [{wordpiece}](https://github.com/jonathanbratt/wordpiece)
+in the
+[{wordpiece}](https://github.com/macmillancontentscience/wordpiece)
 tokenizer package.
 
 ## Installation
@@ -27,11 +28,61 @@ And the development version from [GitHub](https://github.com/) with:
 devtools::install_github("macmillancontentscience/wordpiece.data")
 ```
 
+## Dataset Creation
+
+The datasets included in this package were retrieved from huggingface
+(specifically,
+[https://huggingface.co/bert-base-cased/resolve/main/vocab.txt](cased)
+and
+[https://huggingface.co/bert-base-uncased/resolve/main/vocab.txt](uncased)).
+They were then processed using the
+[https://github.com/macmillancontentscience/wordpiece](%7Bwordpiece%7D)
+package. This is a bit circular, because this package will be used as a
+dependency for the wordpiece package.
+
+``` r
+vocab_txt <- tempfile(fileext = ".txt")
+download.file(
+  url = "https://huggingface.co/bert-base-cased/resolve/main/vocab.txt", 
+  destfile = vocab_txt
+)
+parsed_vocab <- wordpiece::load_vocab(vocab_txt)
+rds_filename <- paste0(
+  paste(
+    "wordpiece",
+    "cased",
+    length(parsed_vocab),
+    sep = "_"
+  ),
+  ".rds"
+)
+saveRDS(parsed_vocab, here::here("inst", "rds", rds_filename))
+unlink(vocab_txt)
+
+vocab_txt <- tempfile(fileext = ".txt")
+download.file(
+  url = "https://huggingface.co/bert-base-uncased/resolve/main/vocab.txt", 
+  destfile = vocab_txt
+)
+parsed_vocab <- wordpiece::load_vocab(vocab_txt)
+rds_filename <- paste0(
+  paste(
+    "wordpiece",
+    "uncased",
+    length(parsed_vocab),
+    sep = "_"
+  ),
+  ".rds"
+)
+saveRDS(parsed_vocab, here::here("inst", "rds", rds_filename))
+unlink(vocab_txt)
+```
+
 ## Example
 
 You likely won’t ever need to use this package directly. It contains a
 function to load data used by
-{[wordpiece](https://github.com/jonathanbratt/wordpiece)}.
+{[wordpiece](https://github.com/macmillancontentscience/wordpiece)}.
 
 ``` r
 library(wordpiece.data)
