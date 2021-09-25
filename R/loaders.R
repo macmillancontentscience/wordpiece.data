@@ -15,18 +15,28 @@
 #' Load a wordpiece Vocabulary
 #'
 #' A wordpiece vocabulary is a named integer vector with class
-#' "wordpiece_vocabulary". The names of the vector are the tokens, and
-#' the values are the integer identifiers of those tokens. The vocabulary is
+#' "wordpiece_vocabulary". The names of the vector are the tokens, and the
+#' values are the integer identifiers of those tokens. The vocabulary is
 #' 0-indexed for compatibility with Python implementations.
 #'
 #' @return A wordpiece_vocabulary.
+#' @param cased Logical; load the uncased vocabulary, or the cased vocabulary?
 #' @export
 #'
 #' @examples
 #' head(wordpiece_vocab())
-wordpiece_vocab <- function() {
+#' head(wordpiece_vocab(cased = TRUE))
+wordpiece_vocab <- function(cased = FALSE) {
+  filetype <- "uncased"
+  n_tokens <- 30522L
+
+  if (cased) {
+    filetype <- "cased"
+    n_tokens <- 28996L
+  }
+
   return(
-    .load_inst_rds("uncased", 30522L)
+    .load_inst_rds(filetype, n_tokens)
   )
 }
 

@@ -4,17 +4,21 @@
 \alias{wordpiece_vocab}
 \title{Load a wordpiece Vocabulary}
 \usage{
-wordpiece_vocab()
+wordpiece_vocab(cased = FALSE)
+}
+\arguments{
+\item{cased}{Logical; load the uncased vocabulary, or the cased vocabulary?}
 }
 \value{
 A wordpiece_vocabulary.
 }
 \description{
 A wordpiece vocabulary is a named integer vector with class
-"wordpiece_vocabulary". The names of the vector are the tokens, and
-the values are the integer identifiers of those tokens. The vocabulary is
+"wordpiece_vocabulary". The names of the vector are the tokens, and the
+values are the integer identifiers of those tokens. The vocabulary is
 0-indexed for compatibility with Python implementations.
 }
 \examples{
 head(wordpiece_vocab())
+head(wordpiece_vocab(cased = TRUE))
 }
