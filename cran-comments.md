@@ -1,3 +1,9 @@
+## Resubmission
+
+This is a resubmission. In this version I have:
+
+* Corrected malformed URLs in README (I had a series of typos, sorry about that).
+
 ## Test environments
 * local R installation, R 4.1.1 (Windows 10)
 * win-builder (devel)

@@ -8,7 +8,7 @@
 
 The goal of wordpiece.data is to provide stable, versioned data for use
 in the
-[{wordpiece}](https://github.com/macmillancontentscience/wordpiece)
+{[wordpiece](https://github.com/macmillancontentscience/wordpiece)}
 tokenizer package.
 
 ## Installation
@@ -32,11 +32,11 @@ devtools::install_github("macmillancontentscience/wordpiece.data")
 
 The datasets included in this package were retrieved from huggingface
 (specifically,
-[https://huggingface.co/bert-base-cased/resolve/main/vocab.txt](cased)
+[cased](https://huggingface.co/bert-base-cased/resolve/main/vocab.txt)
 and
-[https://huggingface.co/bert-base-uncased/resolve/main/vocab.txt](uncased)).
+[uncased](https://huggingface.co/bert-base-uncased/resolve/main/vocab.txt)).
 They were then processed using the
-[https://github.com/macmillancontentscience/wordpiece](%7Bwordpiece%7D)
+{[wordpiece](https://github.com/macmillancontentscience/wordpiece)}
 package. This is a bit circular, because this package will be used as a
 dependency for the wordpiece package.
 
