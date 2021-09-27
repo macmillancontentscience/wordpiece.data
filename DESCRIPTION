@@ -1,6 +1,6 @@
 Package: wordpiece.data
-Title: Data for Wordpiece-style Tokenization
-Version: 0.1.0
+Title: Data for Wordpiece-Style Tokenization
+Version: 1.0.0
 Authors@R: c(
     person(given = "Jonathan",
            family = "Bratt",
