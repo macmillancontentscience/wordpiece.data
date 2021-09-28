@@ -1,6 +1,6 @@
 Package: wordpiece.data
 Title: Data for Wordpiece-Style Tokenization
-Version: 1.0.1
+Version: 1.0.1.9000
 Authors@R: c(
     person(given = "Jonathan",
            family = "Bratt",
@@ -15,7 +15,7 @@ Authors@R: c(
     person(given = "Bedford Freeman & Worth Pub Grp LLC DBA Macmillan Learning", 
            role = c("cph")),
     person(given = "Google, Inc", 
-           role = c("cph"), comment = "original BERT base uncased vocabulary")
+           role = c("cph"), comment = "original BERT vocabularies")
     )
 Description: Provides data to be used by the wordpiece algorithm in order to 
     tokenize text into somewhat meaningful chunks. Included vocabularies were 
