@@ -31,8 +31,8 @@ install.packages("wordpiece.data")
 And the development version from [GitHub](https://github.com/) with:
 
 ``` r
-# install.packages("devtools")
-devtools::install_github("macmillancontentscience/wordpiece.data")
+# install.packages("remotes")
+remotes::install_github("macmillancontentscience/wordpiece.data")
 ```
 
 ## Dataset Creation
