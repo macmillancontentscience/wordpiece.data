@@ -16,8 +16,7 @@ test_that("uncased vocab works", {
   test_result <- wordpiece_vocab()
 
   # Run a couple basic tests to help identify specific strangeness.
-  expect_s3_class(test_result, c("wordpiece_vocabulary", "integer"))
-  expect_named(test_result)
+  expect_s3_class(test_result, c("wordpiece_vocabulary", "character"))
 
   # This test will need to be updated if we change our rules for defining a
   # vocabulary, but otherwise it should be stable.
@@ -31,8 +30,7 @@ test_that("cased vocab works", {
   test_result <- wordpiece_vocab(cased = TRUE)
 
   # Run a couple basic tests to help identify specific strangeness.
-  expect_s3_class(test_result, c("wordpiece_vocabulary", "integer"))
-  expect_named(test_result)
+  expect_s3_class(test_result, c("wordpiece_vocabulary", "character"))
 
   # This test will need to be updated if we change our rules for defining a
   # vocabulary, but otherwise it should be stable.
