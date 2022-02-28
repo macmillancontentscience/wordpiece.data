@@ -39,7 +39,7 @@ remotes::install_github("macmillancontentscience/wordpiece.data")
 
 The datasets included in this package were retrieved from huggingface (specifically, [cased](https://huggingface.co/bert-base-cased/resolve/main/vocab.txt) and [uncased](https://huggingface.co/bert-base-uncased/resolve/main/vocab.txt)).
 They were then processed using the {[wordpiece](https://github.com/macmillancontentscience/wordpiece)} package.
-This is a bit circular, because this package will be used as a dependency for the wordpiece package.
+This is a bit circular, because this package is a dependency for the wordpiece package.
 
 ```{r process-datasets, eval = FALSE}
 vocab_txt <- tempfile(fileext = ".txt")

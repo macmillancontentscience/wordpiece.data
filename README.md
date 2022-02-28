@@ -36,8 +36,8 @@ and
 [uncased](https://huggingface.co/bert-base-uncased/resolve/main/vocab.txt)).
 They were then processed using the
 {[wordpiece](https://github.com/macmillancontentscience/wordpiece)}
-package. This is a bit circular, because this package will be used as a
-dependency for the wordpiece package.
+package. This is a bit circular, because this package is a dependency
+for the wordpiece package.
 
 ``` r
 vocab_txt <- tempfile(fileext = ".txt")
@@ -87,8 +87,7 @@ function to load data used by
 library(wordpiece.data)
 
 head(wordpiece_vocab())
-#>     [PAD] [unused0] [unused1] [unused2] [unused3] [unused4] 
-#>         0         1         2         3         4         5
+#> [1] "[PAD]"     "[unused0]" "[unused1]" "[unused2]" "[unused3]" "[unused4]"
 ```
 
 ## Code of Conduct
